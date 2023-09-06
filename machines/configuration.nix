@@ -33,7 +33,7 @@ let
           ];
           documentation.info.enable = false;
         })
-        hyprland.nixosModules.default
+        # hyprland.nixosModules.default
       ];
     }
     ../modules
