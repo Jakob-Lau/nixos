@@ -5,7 +5,7 @@ let
 in
 {
   my.profiles = {
-    hyprland.enable = true;
+    hyprland.enable = false;
     zsh.enable = true;
     apps = {
       desktop_apps = true;
