@@ -60,5 +60,8 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
+  # location service
+  location.provider = "geoclue2";
+
 }
 
