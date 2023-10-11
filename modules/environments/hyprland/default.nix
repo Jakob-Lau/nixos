@@ -12,7 +12,7 @@ let
   config = lib.mkIf cfg.enable {
     programs.hyprland = {
       enable = true;
-      nvidiaPatches = true;
+      enableNvidiaPatches = true;
       xwayland.enable = true;
     };
     users.users.jakobl.packages = with pkgs; [
