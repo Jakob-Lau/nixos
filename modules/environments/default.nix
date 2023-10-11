@@ -2,7 +2,7 @@
 {
   imports = [
     ./apps
-    #./hyprland
+    ./hyprland
     ./zsh
   ];
 }

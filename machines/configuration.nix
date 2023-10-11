@@ -5,6 +5,7 @@ let
     nixpkgs
     nixpkgs-unstable
     nixos-hardware
+    hyprland
     ;
   nixosSystem = nixpkgs.lib.makeOverridable nixpkgs.lib.nixosSystem;
   overlay-unstable = final: prev: {
@@ -33,7 +34,7 @@ let
           ];
           documentation.info.enable = false;
         })
-        # hyprland.nixosModules.default
+        hyprland.nixosModules.default
       ];
     }
     ../modules
