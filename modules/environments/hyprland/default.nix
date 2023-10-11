@@ -10,13 +10,27 @@ let
   };
 
   config = lib.mkIf cfg.enable {
-    programs.hyprland.enable = true;
+    programs.hyprland = {
+      enable = true;
+      nvidiaPatches = true;
+      xwayland.enable = true;
+    };
     users.users.jakobl.packages = with pkgs; [
       wofi
       mako
+      kitty
+      hyprpaper
+      waybar
+      libsForQt5.dolphin
     ];
-    
-  };   
+    hardware = {
+      # Opengl
+      opengl.enable = true;
+
+      # Most wayland compositors need this
+      nvidia.modesetting.enable = true;
+    };
+  };
 
 
 }
